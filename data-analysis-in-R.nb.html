@@ -1848,13 +1848,11 @@ int</code></pre>
 <h3>To change values to logic</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMubG9naWNhbCh4MSlcblxuYGBgIn0= -->
-<pre class="r"><code>as.logical(x1)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMubG9naWNhbCh4MSlcbmBgYCJ9 -->
+<pre class="r"><code>as.logical(x1)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBUUlVFIFRSVUUgVFJVRSBUUlVFIFRSVUUgVFJVRSBUUlVFIFRSVUUgVFJVRSBUUlVFIFRSVUUgVFJVRSBUUlVFIFRSVUUgVFJVRSBUUlVFIFRSVUVcblsxOF0gVFJVRSBUUlVFIFRSVUVcbiJ9 -->
-<pre><code> [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
-[18] TRUE TRUE TRUE</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBUUlVFIFRSVUUgVFJVRSBUUlVFIFRSVUUgVFJVRSBUUlVFIFRSVUUgVFJVRSBUUlVFIFRSVUUgVFJVRSBUUlVFIFRSVUUgVFJVRSBUUlVFIFRSVUUgVFJVRSBUUlVFIFRSVUVcbiJ9 -->
+<pre><code> [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -2055,14 +2053,14 @@ Levels: no yes</code></pre>
 <h3>To create a dataframe in R</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGY8LWRhdGEuZnJhbWUoaWQ9MTo0LCB0YXJnZXQ9YyhULFQsRixGKSlcbmRmXG5gYGAifQ== -->
-<pre class="r"><code>df&lt;-data.frame(id=1:4, target=c(T,T,F,F))
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGY8LWRhdGEuZnJhbWUoaWQ9MToxMCwgdGFyZ2V0PWMoVCxULEYsRixULFQsRixULEYsVCksIHBvc2l0aW9uPWMoMiwzLDQsMSw1LDcsNiwxLDksMTApLCBjb3N0PWMoMjEsMzIsTkEsTkEsNCwyMywyNCw3NiwxMiw5KSwgc2Vhc29uPWMoMSwxLDEsMiwyLDIsMywzLDMsNCkpXG5kZlxuYGBgIn0= -->
+<pre class="r"><code>df&lt;-data.frame(id=1:10, target=c(T,T,F,F,T,T,F,T,F,T), position=c(2,3,4,1,5,7,6,1,9,10), cost=c(21,32,NA,NA,4,23,24,76,12,9), season=c(1,1,1,2,2,2,3,3,3,4))
 df</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NCwibmNvbCI6Mn0sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVB5dzdDSUJCY2dXb2s4Wkg0SGVYZ04vZ0ZucnhpaTlxSTBGQ01IdjF5RlNpYktDVEE3TURNN3V4M2h5MC9jQUFnUUJrRFFnTmtKQndUWURDUDl4T0FidElIZ0VWOFRZOWpUWFBOZi9pNDgvb3pxb3k4cVNHQWRSS1BKT25haktaZXVyUHloV2p1N0VPZ01IWW5yMnhkdWpkYUR1aU9KRytsbCtMa2dqNVU3MEl5czczdnJBa2lFdk5WaFhqaUNtSjFOM0dTdG00dWQzT3R0emszNWwxa3pINHdHVnVTVDdhcU1Ld3k1ODRvbkYzTG85SzVXSWJFS2JEb1hXYzhKZ25zSUx6MUV2L3h4bXBrVWpaNGZ3RWxHdXA1elFFQUFBPT0ifQ== -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MTAsIm5jb2wiOjV9LCJyZGYiOiJINHNJQUFBQUFBQUFBM1ZTdlU3RE1CQjJuSDlMVkpWZ1lHQkNEQ3pOd0k5Z0kwT2ZBSmF1SmcwbEl0aFY3QW8yZUJhZWtDY29uSk83a2xvaTB1VzcrKzdmOXYxOGNTRVdnakhHV1JoRmpJZWdSaHgrQVl0WTd2Q2RzZkFRbEJqa0FFVDBUcGNBRGhlTnZnUWtCY2xBY293VG8zZ245STN0TVU1Y2ZJbEVtU0ZPQjd6N1J2c0k4UVR4MlBPZklwN3QrZzExcjVISEJoOTlmUHBGU0gzS0c4UmJ4QWZFOC8zNlZKZjYrcmpidzhmc0g1eFMyYjBMaUpWOHJRMG96aDBqeVpzbGFvbVYzYXEyYUdWcmJScmJhSVYyVkdsRHZzVFUwb0JudjN6ZTZiZUNXcmo3NVovREVNS2ZvMnFsb1RtSUZFdHBaZkhVUVQ1WVd5OGwxV3MzQ3lSeGVrSGo1S0R6aU9sR3VVbVdzK3A1bzE1bWwxZnM3L2t3SEM5QWp2UjQ2TWwvdkJOS2FyVnFWRTNEdC9LeGJ0R1l3TXI5eHNXNmF4UWRqd0RXRkZaYlNYR2kwaTB4L1hKcyt3dEFNcHIvTUFNQUFBPT0ifQ== -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["id"],"name":[1],"type":["int"],"align":["right"]},{"label":["target"],"name":[2],"type":["lgl"],"align":["right"]}],"data":[{"1":"1","2":"TRUE"},{"1":"2","2":"TRUE"},{"1":"3","2":"FALSE"},{"1":"4","2":"FALSE"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
+{"columns":[{"label":["id"],"name":[1],"type":["int"],"align":["right"]},{"label":["target"],"name":[2],"type":["lgl"],"align":["right"]},{"label":["position"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["cost"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["season"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"TRUE","3":"2","4":"21","5":"1"},{"1":"2","2":"TRUE","3":"3","4":"32","5":"1"},{"1":"3","2":"FALSE","3":"4","4":"NA","5":"1"},{"1":"4","2":"FALSE","3":"1","4":"NA","5":"2"},{"1":"5","2":"TRUE","3":"5","4":"4","5":"2"},{"1":"6","2":"TRUE","3":"7","4":"23","5":"2"},{"1":"7","2":"FALSE","3":"6","4":"24","5":"3"},{"1":"8","2":"TRUE","3":"1","4":"76","5":"3"},{"1":"9","2":"FALSE","3":"9","4":"12","5":"3"},{"1":"10","2":"TRUE","3":"10","4":"9","5":"4"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
   </script>
 </div>
 <!-- rnb-frame-end -->
@@ -2076,9 +2074,6 @@ df</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubnJvdyhkZilcbmBgYCJ9 -->
 <pre class="r"><code>nrow(df)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDRcbiJ9 -->
-<pre><code>[1] 4</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -2089,8 +2084,8 @@ df</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmNvbChkZilcbmBgYCJ9 -->
 <pre class="r"><code>ncol(df)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDJcbiJ9 -->
-<pre><code>[1] 2</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDVcbiJ9 -->
+<pre><code>[1] 5</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -2102,8 +2097,135 @@ df</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoZGYpXG5gYGAifQ== -->
 <pre class="r"><code>names(df)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaWRcIiAgICAgXCJ0YXJnZXRcIlxuIn0= -->
-<pre><code>[1] &quot;id&quot;     &quot;target&quot;</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaWRcIiAgICAgICBcInRhcmdldFwiICAgXCJwb3NpdGlvblwiIFwiY29zdFwiICAgICBcInNlYXNvblwiICBcbiJ9 -->
+<pre><code>[1] &quot;id&quot;       &quot;target&quot;   &quot;position&quot; &quot;cost&quot;     &quot;season&quot;  </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="to-obtain-the-value-of-cost-in-the-7th-row" class="section level3">
+<h3>To obtain the value of cost in the 7th row</h3>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGZbNyxcImNvc3RcIl1cbmBgYCJ9 -->
+<pre class="r"><code>df[7,&quot;cost&quot;]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDI0XG4ifQ== -->
+<pre><code>[1] 24</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="to-know-how-many-missing-values-are-in-the-cost-column" class="section level3">
+<h3>To know how many missing values are in the cost column</h3>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY3N0X25hPWlzLm5hKGRmW1wiY29zdFwiXSlcbnRhYmxlKGNzdF9uYSlcbmBgYCJ9 -->
+<pre class="r"><code>cst_na=is.na(df[&quot;cost&quot;])
+table(cst_na)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiY3N0X25hXG5GQUxTRSAgVFJVRSBcbiAgICA4ICAgICAyIFxuIn0= -->
+<pre><code>cst_na
+FALSE  TRUE 
+    8     2 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="calculate-the-mean-removing-the-na-values" class="section level3">
+<h3>Calculate the mean removing the na values</h3>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY3N0PWRmW1wiY29zdFwiXVxuY3N0PWNzdFshY3N0X25hXVxubWVhbihjc3QpXG5gYGAifQ== -->
+<pre class="r"><code>cst=df[&quot;cost&quot;]
+cst=cst[!cst_na]
+mean(cst)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDI1LjEyNVxuIn0= -->
+<pre><code>[1] 25.125</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="extract-the-subset-of-rows-with-cost21-and-season1-and-calculate-the-mean-of-position" class="section level3">
+<h3>Extract the subset of rows with cost&gt;21 and season&gt;1 and calculate the mean of position</h3>
+<div id="first-remove-missing-values" class="section level4">
+<h4>First remove missing values</h4>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3Vic2V0PC1kZltjb21wbGV0ZS5jYXNlcyhkZiRjb3N0LCBkZiRzZWFzb24sIGRmJHBvc2l0aW9uKSwgXVxuc3Vic2V0XG5gYGAifQ== -->
+<pre class="r"><code>subset&lt;-df[complete.cases(df$cost, df$season, df$position), ]
+subset</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6OCwibmNvbCI6NX0sInJkZiI6Ikg0c0lBQUFBQUFBQUE0MVNQVS9EUUF4MTg5WDBwRmFSWUdCZ1Fnd3N6WUNLWUNNRHY2QXNYWThrbElod0YrV3VncC9OTHlqNEVydEtJaUVSeVhuMjgvblpjVzc3dExzVk93RUFIdmhCQUo2UGJ1RGhhd1lCTEJ4K0FmaG42SVJvUzdTNFM3cUNub3ZRNXNTN0FrSEc1NFlHRTF5NWN4a1JXVXg0VG5oSmVOSGo0emZGVjRUWHdFK3ZjMGM4Q1dZSjRUM2hBK0V6NGMxWWozVzR6NmtmVEREK0F4T1dHUzB3VlBLak5PaTRkRWlrVnhYa1JWYTIrOUpTRkRmYVZMYlNpdUlnMTRaemtTbWx3Y3hZZnRIcXo1UmIvUFAvak9mTGEybDRQaVpGSWExTVgxdlV4ZWc0S1pucnhzMklSUjdmakdIeHJKMFF5VUc1Q1l0MS9uWlE3K3ZOcGgvamRDMldoUEhBRC91ZTNzOWtjMUdwOXBVcWVmaGF2cFExQlN0Y1JiZUp0R2tyeFdzVHlKclVhaXY1bk1oMXpVejNjWEQ4QlhKRHJBUUlBd0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["id"],"name":[1],"type":["int"],"align":["right"]},{"label":["target"],"name":[2],"type":["lgl"],"align":["right"]},{"label":["position"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["cost"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["season"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"TRUE","3":"2","4":"21","5":"1","_rn_":"1"},{"1":"2","2":"TRUE","3":"3","4":"32","5":"1","_rn_":"2"},{"1":"5","2":"TRUE","3":"5","4":"4","5":"2","_rn_":"5"},{"1":"6","2":"TRUE","3":"7","4":"23","5":"2","_rn_":"6"},{"1":"7","2":"FALSE","3":"6","4":"24","5":"3","_rn_":"7"},{"1":"8","2":"TRUE","3":"1","4":"76","5":"3","_rn_":"8"},{"1":"9","2":"FALSE","3":"9","4":"12","5":"3","_rn_":"9"},{"1":"10","2":"TRUE","3":"10","4":"9","5":"4","_rn_":"10"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[8]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="use-the-logical-operator" class="section level4">
+<h4>Use the logical operator</h4>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG9nPC1zdWJzZXRbc3Vic2V0JGNvc3Q+MjEgJiBzdWJzZXQkc2Vhc29uPjEsXVxubG9nXG5gYGAifQ== -->
+<pre class="r"><code>log&lt;-subset[subset$cost&gt;21 &amp; subset$season&gt;1,]
+log</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MywibmNvbCI6NX0sInJkZiI6Ikg0c0lBQUFBQUFBQUEyMVJ5MDdETUJEY09JK21sbHBWNHNLQlgyZ09GUWh1NU1BWHdLVlhOekVsYXJDajJCVjhObDlRV01kcnFiR3dOSm5kV2E4OTY3eSs3SGQ4endHQVFacGx3RklNTTRhZkJESllPdjRHU0c4d3lCRXJoTnRSSUJhSUVzRkpTOEF2eDJ1bjFYZGVxRzg5UC85QVdMNytTUFVuNHJlb1RrbGR6amt5bUN2eEtRMEdtOG1rRjFuWFVsUllNUjZscGF3Y3RPbHNweFhsV2FOTnFCVkdDb09WK2ZITFVYOVY0WXAvNXA5N2FYcGhncGNnOGxaWVViMlBlQVptbDZobG9RZm5CNXRZZU9YcjVtU01oTTFaT1RmdHR2azRxOVAyL29GK1FVSllFYWRYY2U3dlpML1JLeFZTSFRzbGcvbGVIR1JQeVJySG5xYXVockZUNFlrNHFxYXkyb3F3anplNkQ4bzBIRnorQUphUVdzRlVBZ0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["id"],"name":[1],"type":["int"],"align":["right"]},{"label":["target"],"name":[2],"type":["lgl"],"align":["right"]},{"label":["position"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["cost"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["season"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"6","2":"TRUE","3":"7","4":"23","5":"2","_rn_":"6"},{"1":"7","2":"FALSE","3":"6","4":"24","5":"3","_rn_":"7"},{"1":"8","2":"TRUE","3":"1","4":"76","5":"3","_rn_":"8"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="calculate-the-mean-of-position" class="section level4">
+<h4>Calculate the mean of position</h4>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucG9zPC1sb2dbW1wic2Vhc29uXCJdXVxubWVhbihwb3MpXG5gYGAifQ== -->
+<pre class="r"><code>pos&lt;-log[[&quot;season&quot;]]
+mean(pos)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDIuNjY2NjY3XG4ifQ== -->
+<pre><code>[1] 2.666667</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+</div>
+<div id="calculate-the-mean-of-cost-when-season3" class="section level3">
+<h3>Calculate the mean of cost when season=3</h3>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYzPC1kZltkZiRzZWFzb249PTMsXVxuc2VhczM8LWRmM1tbXCJjb3N0XCJdXVxubWVhbihzZWFzMylcbmBgYCJ9 -->
+<pre class="r"><code>df3&lt;-df[df$season==3,]
+seas3&lt;-df3[[&quot;cost&quot;]]
+mean(seas3)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDM3LjMzMzMzXG4ifQ== -->
+<pre><code>[1] 37.33333</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="maximum-cost-value-in-the-season-2" class="section level3">
+<h3>Maximum cost value in the season 2</h3>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYyPC1kZltkZiRzZWFzb249PTIsXVxuZGYyPC1kZjJbW1wiY29zdFwiXV1cbm1heChkZjIsIG5hLnJtPVRSVUUpXG5gYGAifQ== -->
+<pre class="r"><code>df2&lt;-df[df$season==2,]
+df2&lt;-df2[[&quot;cost&quot;]]
+max(df2, na.rm=TRUE)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDIzXG4ifQ== -->
+<pre><code>[1] 23</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -2146,7 +2268,7 @@ b 2 4</code></pre>
 <!-- rnb-chunk-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiRGF0YSBhbmFseXNpcyBpbiBSIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCiMjIyBBc3NpZ24gYSB2YWx1ZSB0byBhIHZhcmlhYmxlCmBgYHtyfQp4PC0xCngKYGBgCiMjIyBUbyBwcmludCBpbiBjb25zb2xlCgpgYGB7cn0KcHJpbnQoeCkKYGBgCiMjIyBUbyBhc3NpZ24gYSBjaGFyYWN0ZXIgdmFsdWUKYGBge3J9Cm1zZzwtImhlbGxvIgptc2cKYGBgCiMjIyBUbyBhc3NpZ24gYSB2ZWN0b3IKYGBge3J9CngxPC0xOjIwCngxCmBgYAojIyMgVG8gdXNlIGludGVnZXJzCmBgYHtyfQppbnQ8LTJMCmludApgYGAKIyMjIFRvIHVzZSBpbmZpbml0eQpgYGB7cn0KaW50L0luZgpgYGAKIyMjIFRvIGNvbmNhdGVuYXRlIHZhbHVlcwpgYGB7cn0KYygwLjUsIDAuNikKYGBgCiMjIyBUbyBjaGFuZ2UgdmFsdWVzIHRvIGxvZ2ljCmBgYHtyfQphcy5sb2dpY2FsKHgxKQpgYGAKIyMjIFRvIGNyZWF0ZSBhIGxpc3QgKEl0IGNhbiBjb250YWluIHZhbHVlcyBvZiBkaWZmZXJlbnQgdHlwZXMpCmBgYHtyfQpsaXN0X3g8LWxpc3QoMSwiYSIsIFRSVUUsIDErNGksIDJMKQpsaXN0X3gKYGBgCiMjIyBUbyBjcmVhdGUgYW4gZW1wdHkgbWF0cml4CmBgYHtyfQptYXQ8LW1hdHJpeChucm93PTIsIG5jb2w9MykKbWF0CmBgYAojIyMgVG8gc2VlIHRoZSBkaW1lbnNpb24gb2YgdGhlIG1hdHJpeCBjcmVhdGVkCmBgYHtyfQpkaW0obWF0KQpgYGAKIyMjIFRvIHNlZSB0aGUgYXR0cmlidXRlcyBvZiB0aGUgbWF0cml4LiBJbiB0aGlzIGNhc2UgaXRzIGRpbWVuc2lvbgpgYGB7cn0KYXR0cmlidXRlcyhtYXQpCmBgYAojIyMgVG8gZmlsbCBhIG1hdHJpeApgYGB7cn0KbWF0PC1tYXRyaXgoMTo2LCBucm93PTIsIG5jb2w9MykKbWF0CmBgYAojIyMgVG8gY2hhbmdlIHRoZSBmb3JtYXQgb2YgdGhlIG1hdHJpeCBjaGFuZ2luZyB0aGUgZGltZW5zaW9uIGFzIGF0dHJpYnV0ZQpgYGB7cn0KZGltKG1hdCk8LWMoMywyKQptYXQKYGBgCiMjIyBUbyBjb25jYXRlbmF0ZSB2ZWN0b3JzIGJ5IHJvd3MgCmBgYHtyfQp4MjwtMTozCnkyPC03OjkKcmJpbmQoeDIseTIpCmBgYAojIyMgVG8gY29uY2F0ZW5hdGUgdmVjdG9ycyBieSBjb2x1bW5zCmBgYHtyfQpjYmluZCh4Mix5MikKYGBgCiMjIyBUbyB1c2UgZmFjdG9ycyB0byBsYWJlbCB0aGUgcmVzdWx0cyBpbiB0aGUgdGFibGUKYGBge3J9CmZhYzwtZmFjdG9yKGMoInllcyIsICJ5ZXMiLCAibm8iLCAieWVzIikpCmZhYwpgYGAKIyMjIFRvIHNlZSB0aGUgZmFjdG9yIGFzIHRhYmxlCmBgYHtyfQp0YWJsZShmYWMpCmBgYAojIyMgVG8gZmluZCBudWxsIHZhbHVlcwpgYGB7cn0KaXMubmEoZmFjKQpgYGAKIyMjIFRvIGZpbmQgbmFuIHZhbHVlcwpgYGB7cn0KaXMubmFuKGZhYykKYGBgCiMjIyBUbyBjcmVhdGUgYSBkYXRhZnJhbWUgaW4gUgpgYGB7cn0KZGY8LWRhdGEuZnJhbWUoaWQ9MTo0LCB0YXJnZXQ9YyhULFQsRixGKSkKZGYKYGBgCiMjIyBUbyBzZWUgdGhlIG51bWJlciBvZiByb3dzCmBgYHtyfQpucm93KGRmKQpgYGAKIyMjIFRvIHNlZSB0aGUgbnVtYmVyIG9mIGNvbHVtbnMKYGBge3J9Cm5jb2woZGYpCmBgYAojIyMgVG8gc2VlIHRoZSBuYW1lcyBvZiB0aGUgY29sdW1ucwpgYGB7cn0KbmFtZXMoZGYpCmBgYAojIyMgVG8gY3JlYXRlIGEgbGlzdCB3aXRoIG5hbWVzCmBgYHtyfQpsaXN0X3gxPC1saXN0KGE9MSxiPTIsYz0zKQpsaXN0X3gxCmBgYAojIyMgVG8gY3JlYXRlIGEgbGlzdCB3aXRoIG5hbWVzCmBgYHtyfQptYXQyPC1tYXRyaXgoMTo0LG5yb3c9MiwgbmNvbD0yKQpkaW1uYW1lcyhtYXQyKTwtbGlzdChjKCJhIiwiYiIpLGMoImMiLCJkIikpCm1hdDIKYGBgCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRGF0YSBhbmFseXNpcyBpbiBSIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCiMjIyBBc3NpZ24gYSB2YWx1ZSB0byBhIHZhcmlhYmxlCmBgYHtyfQp4PC0xCngKYGBgCiMjIyBUbyBwcmludCBpbiBjb25zb2xlCgpgYGB7cn0KcHJpbnQoeCkKYGBgCiMjIyBUbyBhc3NpZ24gYSBjaGFyYWN0ZXIgdmFsdWUKYGBge3J9Cm1zZzwtImhlbGxvIgptc2cKYGBgCiMjIyBUbyBhc3NpZ24gYSB2ZWN0b3IKYGBge3J9CngxPC0xOjIwCngxCmBgYAojIyMgVG8gdXNlIGludGVnZXJzCmBgYHtyfQppbnQ8LTJMCmludApgYGAKIyMjIFRvIHVzZSBpbmZpbml0eQpgYGB7cn0KaW50L0luZgpgYGAKIyMjIFRvIGNvbmNhdGVuYXRlIHZhbHVlcwpgYGB7cn0KYygwLjUsIDAuNikKYGBgCiMjIyBUbyBjaGFuZ2UgdmFsdWVzIHRvIGxvZ2ljCmBgYHtyfQphcy5sb2dpY2FsKHgxKQpgYGAKIyMjIFRvIGNyZWF0ZSBhIGxpc3QgKEl0IGNhbiBjb250YWluIHZhbHVlcyBvZiBkaWZmZXJlbnQgdHlwZXMpCmBgYHtyfQpsaXN0X3g8LWxpc3QoMSwiYSIsIFRSVUUsIDErNGksIDJMKQpsaXN0X3gKYGBgCiMjIyBUbyBjcmVhdGUgYW4gZW1wdHkgbWF0cml4CmBgYHtyfQptYXQ8LW1hdHJpeChucm93PTIsIG5jb2w9MykKbWF0CmBgYAojIyMgVG8gc2VlIHRoZSBkaW1lbnNpb24gb2YgdGhlIG1hdHJpeCBjcmVhdGVkCmBgYHtyfQpkaW0obWF0KQpgYGAKIyMjIFRvIHNlZSB0aGUgYXR0cmlidXRlcyBvZiB0aGUgbWF0cml4LiBJbiB0aGlzIGNhc2UgaXRzIGRpbWVuc2lvbgpgYGB7cn0KYXR0cmlidXRlcyhtYXQpCmBgYAojIyMgVG8gZmlsbCBhIG1hdHJpeApgYGB7cn0KbWF0PC1tYXRyaXgoMTo2LCBucm93PTIsIG5jb2w9MykKbWF0CmBgYAojIyMgVG8gY2hhbmdlIHRoZSBmb3JtYXQgb2YgdGhlIG1hdHJpeCBjaGFuZ2luZyB0aGUgZGltZW5zaW9uIGFzIGF0dHJpYnV0ZQpgYGB7cn0KZGltKG1hdCk8LWMoMywyKQptYXQKYGBgCiMjIyBUbyBjb25jYXRlbmF0ZSB2ZWN0b3JzIGJ5IHJvd3MgCmBgYHtyfQp4MjwtMTozCnkyPC03OjkKcmJpbmQoeDIseTIpCmBgYAojIyMgVG8gY29uY2F0ZW5hdGUgdmVjdG9ycyBieSBjb2x1bW5zCmBgYHtyfQpjYmluZCh4Mix5MikKYGBgCiMjIyBUbyB1c2UgZmFjdG9ycyB0byBsYWJlbCB0aGUgcmVzdWx0cyBpbiB0aGUgdGFibGUKYGBge3J9CmZhYzwtZmFjdG9yKGMoInllcyIsICJ5ZXMiLCAibm8iLCAieWVzIikpCmZhYwpgYGAKIyMjIFRvIHNlZSB0aGUgZmFjdG9yIGFzIHRhYmxlCmBgYHtyfQp0YWJsZShmYWMpCmBgYAojIyMgVG8gZmluZCBudWxsIHZhbHVlcwpgYGB7cn0KaXMubmEoZmFjKQpgYGAKIyMjIFRvIGZpbmQgbmFuIHZhbHVlcwpgYGB7cn0KaXMubmFuKGZhYykKYGBgCiMjIyBUbyBjcmVhdGUgYSBkYXRhZnJhbWUgaW4gUgpgYGB7cn0KZGY8LWRhdGEuZnJhbWUoaWQ9MToxMCwgdGFyZ2V0PWMoVCxULEYsRixULFQsRixULEYsVCksIHBvc2l0aW9uPWMoMiwzLDQsMSw1LDcsNiwxLDksMTApLCBjb3N0PWMoMjEsMzIsTkEsTkEsNCwyMywyNCw3NiwxMiw5KSwgc2Vhc29uPWMoMSwxLDEsMiwyLDIsMywzLDMsNCkpCmRmCmBgYAojIyMgVG8gc2VlIHRoZSBudW1iZXIgb2Ygcm93cwpgYGB7cn0KbnJvdyhkZikKYGBgCiMjIyBUbyBzZWUgdGhlIG51bWJlciBvZiBjb2x1bW5zCmBgYHtyfQpuY29sKGRmKQpgYGAKIyMjIFRvIHNlZSB0aGUgbmFtZXMgb2YgdGhlIGNvbHVtbnMKYGBge3J9Cm5hbWVzKGRmKQpgYGAKIyMjIFRvIG9idGFpbiB0aGUgdmFsdWUgb2YgY29zdCBpbiB0aGUgN3RoIHJvdwpgYGB7cn0KZGZbNywiY29zdCJdCmBgYAojIyMgVG8ga25vdyBob3cgbWFueSBtaXNzaW5nIHZhbHVlcyBhcmUgaW4gdGhlIGNvc3QgY29sdW1uCmBgYHtyfQpjc3RfbmE9aXMubmEoZGZbImNvc3QiXSkKdGFibGUoY3N0X25hKQpgYGAKIyMjIENhbGN1bGF0ZSB0aGUgbWVhbiByZW1vdmluZyB0aGUgbmEgdmFsdWVzCmBgYHtyfQpjc3Q9ZGZbImNvc3QiXQpjc3Q9Y3N0WyFjc3RfbmFdCm1lYW4oY3N0KQpgYGAKIyMjIEV4dHJhY3QgdGhlIHN1YnNldCBvZiByb3dzIHdpdGggY29zdD4yMSBhbmQgc2Vhc29uPjEgYW5kIGNhbGN1bGF0ZSB0aGUgbWVhbiBvZiBwb3NpdGlvbgoKIyMjIyBGaXJzdCByZW1vdmUgbWlzc2luZyB2YWx1ZXMKYGBge3J9CnN1YnNldDwtZGZbY29tcGxldGUuY2FzZXMoZGYkY29zdCwgZGYkc2Vhc29uLCBkZiRwb3NpdGlvbiksIF0Kc3Vic2V0CmBgYAojIyMjIFVzZSB0aGUgbG9naWNhbCBvcGVyYXRvcgpgYGB7cn0KbG9nPC1zdWJzZXRbc3Vic2V0JGNvc3Q+MjEgJiBzdWJzZXQkc2Vhc29uPjEsXQpsb2cKYGBgCiMjIyMgQ2FsY3VsYXRlIHRoZSBtZWFuIG9mIHBvc2l0aW9uCmBgYHtyfQpwb3M8LWxvZ1tbInNlYXNvbiJdXQptZWFuKHBvcykKYGBgCiMjIyBDYWxjdWxhdGUgdGhlIG1lYW4gb2YgY29zdCB3aGVuIHNlYXNvbj0zCmBgYHtyfQpkZjM8LWRmW2RmJHNlYXNvbj09MyxdCnNlYXMzPC1kZjNbWyJjb3N0Il1dCm1lYW4oc2VhczMpCmBgYAojIyMgTWF4aW11bSBjb3N0IHZhbHVlIGluIHRoZSBzZWFzb24gMgpgYGB7cn0KZGYyPC1kZltkZiRzZWFzb249PTIsXQpkZjI8LWRmMltbImNvc3QiXV0KbWF4KGRmMiwgbmEucm09VFJVRSkKYGBgCiMjIyBUbyBjcmVhdGUgYSBsaXN0IHdpdGggbmFtZXMKYGBge3J9Cmxpc3RfeDE8LWxpc3QoYT0xLGI9MixjPTMpCmxpc3RfeDEKYGBgCiMjIyBUbyBjcmVhdGUgYSBsaXN0IHdpdGggbmFtZXMKYGBge3J9Cm1hdDI8LW1hdHJpeCgxOjQsbnJvdz0yLCBuY29sPTIpCmRpbW5hbWVzKG1hdDIpPC1saXN0KGMoImEiLCJiIiksYygiYyIsImQiKSkKbWF0MgpgYGAK</div>
 
 
 

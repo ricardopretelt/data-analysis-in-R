@@ -96,7 +96,7 @@ is.nan(fac)
 ```
 ### To create a dataframe in R
 ```{r}
-df<-data.frame(id=1:4, target=c(T,T,F,F))
+df<-data.frame(id=1:10, target=c(T,T,F,F,T,T,F,T,F,T), position=c(2,3,4,1,5,7,6,1,9,10), cost=c(21,32,NA,NA,4,23,24,76,12,9), season=c(1,1,1,2,2,2,3,3,3,4))
 df
 ```
 ### To see the number of rows
@@ -110,6 +110,50 @@ ncol(df)
 ### To see the names of the columns
 ```{r}
 names(df)
+```
+### To obtain the value of cost in the 7th row
+```{r}
+df[7,"cost"]
+```
+### To know how many missing values are in the cost column
+```{r}
+cst_na=is.na(df["cost"])
+table(cst_na)
+```
+### Calculate the mean removing the na values
+```{r}
+cst=df["cost"]
+cst=cst[!cst_na]
+mean(cst)
+```
+### Extract the subset of rows with cost>21 and season>1 and calculate the mean of position
+
+#### First remove missing values
+```{r}
+subset<-df[complete.cases(df$cost, df$season, df$position), ]
+subset
+```
+#### Use the logical operator
+```{r}
+log<-subset[subset$cost>21 & subset$season>1,]
+log
+```
+#### Calculate the mean of position
+```{r}
+pos<-log[["season"]]
+mean(pos)
+```
+### Calculate the mean of cost when season=3
+```{r}
+df3<-df[df$season==3,]
+seas3<-df3[["cost"]]
+mean(seas3)
+```
+### Maximum cost value in the season 2
+```{r}
+df2<-df[df$season==2,]
+df2<-df2[["cost"]]
+max(df2, na.rm=TRUE)
 ```
 ### To create a list with names
 ```{r}
