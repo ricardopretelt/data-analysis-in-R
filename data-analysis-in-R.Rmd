@@ -2,121 +2,121 @@
 title: "Data analysis in R"
 output: html_notebook
 ---
-Assign a value to a variable
+### Assign a value to a variable
 ```{r}
 x<-1
 x
 ```
-It can also be printed in console
+### To print in console
 
 ```{r}
 print(x)
 ```
-To assign a character value
+### To assign a character value
 ```{r}
 msg<-"hello"
 msg
 ```
-To assign a vector
+### To assign a vector
 ```{r}
 x1<-1:20
 x1
 ```
-To use integers
+### To use integers
 ```{r}
 int<-2L
 int
 ```
-To use infinity
+### To use infinity
 ```{r}
 int/Inf
 ```
-To concatenate values
+### To concatenate values
 ```{r}
 c(0.5, 0.6)
 ```
-To change values to logic
+### To change values to logic
 ```{r}
 as.logical(x1)
 ```
-To create a list (It can contain values of different types)
+### To create a list (It can contain values of different types)
 ```{r}
 list_x<-list(1,"a", TRUE, 1+4i, 2L)
 list_x
 ```
-To create an empty matrix
+### To create an empty matrix
 ```{r}
 mat<-matrix(nrow=2, ncol=3)
 mat
 ```
-To see the dimension of the matrix created
+### To see the dimension of the matrix created
 ```{r}
 dim(mat)
 ```
-To see the attributes of the matrix. In this case its dimension
+### To see the attributes of the matrix. In this case its dimension
 ```{r}
 attributes(mat)
 ```
-To fill a matrix
+### To fill a matrix
 ```{r}
 mat<-matrix(1:6, nrow=2, ncol=3)
 mat
 ```
-To change the format of the matrix changing the dimension as attribute
+### To change the format of the matrix changing the dimension as attribute
 ```{r}
 dim(mat)<-c(3,2)
 mat
 ```
-To concatenate vectors by rows 
+### To concatenate vectors by rows 
 ```{r}
 x2<-1:3
 y2<-7:9
 rbind(x2,y2)
 ```
-To concatenate vectors by columns
+### To concatenate vectors by columns
 ```{r}
 cbind(x2,y2)
 ```
-To use factors to label the results in the table
+### To use factors to label the results in the table
 ```{r}
 fac<-factor(c("yes", "yes", "no", "yes"))
 fac
 ```
-To see the factor as table
+### To see the factor as table
 ```{r}
 table(fac)
 ```
-To find null values
+### To find null values
 ```{r}
 is.na(fac)
 ```
-To find nan values
+### To find nan values
 ```{r}
 is.nan(fac)
 ```
-To create a dataframe in R
+### To create a dataframe in R
 ```{r}
 df<-data.frame(id=1:4, target=c(T,T,F,F))
 df
 ```
-To see the number of rows
+### To see the number of rows
 ```{r}
 nrow(df)
 ```
-To see the number of columns
+### To see the number of columns
 ```{r}
 ncol(df)
 ```
-To see the names of the columns
+### To see the names of the columns
 ```{r}
 names(df)
 ```
-To create a list with names
+### To create a list with names
 ```{r}
 list_x1<-list(a=1,b=2,c=3)
 list_x1
 ```
-To create a list with names
+### To create a list with names
 ```{r}
 mat2<-matrix(1:4,nrow=2, ncol=2)
 dimnames(mat2)<-list(c("a","b"),c("c","d"))
