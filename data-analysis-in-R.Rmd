@@ -166,3 +166,111 @@ mat2<-matrix(1:4,nrow=2, ncol=2)
 dimnames(mat2)<-list(c("a","b"),c("c","d"))
 mat2
 ```
+### If else control structure
+```{r}
+x<-2
+if (x==2){
+        y<-1
+}else{
+        y<-0
+}
+y  
+```
+#### else if case
+```{r}
+a<-1
+if (x==1){
+        y<-4
+}else if(a==1){
+        y<-0
+}
+print(y)
+```
+### For control structure
+```{r}
+for (i in 1:3){
+        print(i)
+} 
+```
+#### Use of seq_along()
+```{r}
+x<-c("a","b","c","d")
+for (i in seq_along(x)){
+        print(x[i])
+}
+```
+#### Nested loop
+```{r}
+x<-matrix(1:6, 2,3)
+for (i in seq_len(nrow(x))){
+        for (j in seq_len(ncol(x))){
+                print(x[i,j])
+        }
+}
+```
+### While control structure
+```{r}
+count<-0
+while(count<5){
+        print(count)
+        count<-count+1
+}
+```
+### Repeat and break control structure
+```{r}
+value<-100000
+div<-2
+tol<- 1e-8
+iter<-0
+repeat{
+        value<-value/div
+        if(value<tol){
+                print(iter)
+                break
+        }else{
+                iter<-iter+1    
+        } 
+}
+```
+### Next control structure
+```{r}
+goal<-4
+for (i in 1:6){
+        if (goal==i){
+                print("you are there")
+                next
+        } 
+        print(i)
+}
+```
+### Create a function
+```{r}
+add_func<-function(x,y){
+        x+y
+}
+add_func(4,3)
+```
+### Create function with default
+```{r}
+add_func2<-function(x,y=3){
+        x+y
+}
+add_func2(2)
+```
+### Dates and time in R
+
+#### Assign a date
+```{r}
+x<-as.Date("1970-01-01")
+x
+```
+#### Actual system time
+```{r}
+x<-Sys.time()
+x #it is in POSIXct
+```
+#### To get info from POSIXlt
+```{r}
+p<-as.POSIXlt(x)
+p$sec
+```
