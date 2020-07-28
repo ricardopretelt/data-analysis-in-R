@@ -274,3 +274,82 @@ x #it is in POSIXct
 p<-as.POSIXlt(x)
 p$sec
 ```
+### Lapply structure
+```{r}
+x<-list(a=1:4, b=rnorm(10))
+lapply(x, mean)
+```
+#### Lapply structure with arguments for the function
+```{r}
+x<-1:3
+lapply(x, runif, min=0, max=10)
+```
+#### Lapply structure to take the subset of a matrix
+```{r}
+x<-list(a=matrix(1:4,2,2), b=matrix(1:6,3,2))
+lapply(x, function(elt) elt[,1])
+```
+### Sapply structure
+- If the result is a list where every element is length 1, it returns a vector.
+- If the result is a list with every element of equal length, it returns a matrix.
+- If it cannot figure it out, returns the same as lapply
+```{r}
+x<-list(a=1:4, b=rnorm(10))
+sapply(x, mean)
+```
+### Apply structure
+It takes the list, the margin, the function and if possible the arguments of the function
+```{r}
+x<-matrix(rnorm(200), 20, 10) 
+apply(x, 2, mean) # 2 To keep column dimension
+```
+```{r}
+apply(x, 1, mean) # 1 to keep row dimension
+```
+There are shortcuts for specific cases of apply as rowSums, rowMeans, colSums and colMeans
+```{r}
+rowSums(x)
+```
+#### Calculate quantiles with apply
+```{r}
+apply(x, 1, quantile, probs=c(0.25,0.75))
+```
+#### Calculate the mean using apply of a matrix of 3 dimensions
+```{r}
+a<-array(rnorm(2*2*10), c(2,2,10))
+apply(a,c(1,2), mean)
+```
+```{r}
+rowMeans(a,dims=2)
+```
+### Mapply structure
+when more than one argument is needed
+```{r}
+mapply(rep, 1:3, 3:1)
+```
+#### Vectorizing a function
+```{r}
+noise<-function(n,mean,sd){
+        rnorm(n, mean, sd)
+}
+mapply(noise, 1:3, 1:3,2)
+```
+The same as 
+```{r}
+list(noise(1,1,2), noise(2,2,2), noise(3,3,2))
+```
+### Tapply structure
+```{r}
+x<-c(rnorm(10), runif(10), rnorm(10,1))
+f<-gl(3,10)
+f
+```
+```{r}
+tapply(x, f, mean)
+```
+### Split structure
+Split the dataframe by monthly pieces and calculate the mean of each month's attributes
+```{r}
+s<-split(airquality, airquality$Month)
+sapply(s, function(x) colMeans(x[,c("Ozone", "Solar.R", "Wind")], na.rm=TRUE))
+```
