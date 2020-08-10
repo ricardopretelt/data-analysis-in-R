@@ -298,8 +298,8 @@ listA
 x<-list(a=matrix(1:4,2,2), b=matrix(1:6,3,2))
 lapply(x, function(elt) elt[,1])
 ```
-# To not get a list but a vector
 ```{r}
+# To not get a list but a vector
 unlist(listA)
 ```
 ```{r}
