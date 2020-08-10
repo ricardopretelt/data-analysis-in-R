@@ -285,17 +285,45 @@ x<-1:3
 lapply(x, runif, min=0, max=10)
 ```
 #### Lapply structure to take the subset of a matrix
+lapply() takes a vector object and passes each item in the vector through a function.
+Each time an iten is passed, the return method stores the value in a list
 ```{r}
+# lapply to a vector
+vectorA <- 1:3
+listA<-lapply(vectorA, sqrt)
+listA
+```
+```{r}
+# lapply with a matrix
 x<-list(a=matrix(1:4,2,2), b=matrix(1:6,3,2))
 lapply(x, function(elt) elt[,1])
 ```
-### Sapply structure
+# To not get a list but a vector
+```{r}
+unlist(listA)
+```
+```{r}
+# lapply With a dataframe
+listB <- list(data.frame(x=1:3, y=1:3*2), data.frame(x=4:6, y=4:6*2))
+lapply(listB, sum)
+```
+### Use an anonymous function with lapply
+Each dataframe is passed through the function as the data argument, all the results are saved and returned in a list
+```{r}
+# sqrt of the values in the x column of both dataframes
+lapply(listB, function(data) sqrt(data$x))
+```
+### To use column names with lapply
+```{r}
+my_column <- "x"
+unlist( lapply(listB, function(data) data[[my_column]]) )
+```
+### Sapply structure: lapply without the unlist incorporated
 - If the result is a list where every element is length 1, it returns a vector.
 - If the result is a list with every element of equal length, it returns a matrix.
 - If it cannot figure it out, returns the same as lapply
 ```{r}
-x<-list(a=1:4, b=rnorm(10))
-sapply(x, mean)
+sapply(listB, function(data) data[[my_column]]) 
 ```
 ### Apply structure
 It takes the list, the margin, the function and if possible the arguments of the function
