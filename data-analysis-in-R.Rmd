@@ -2,28 +2,27 @@
 title: "Data analysis in R"
 output: html_notebook
 ---
-### Assign a value to a variable
+### To assign values to a variable
 ```{r}
 x<-1
 x
 ```
-### To print in console
-
 ```{r}
+# To print values in console
 print(x)
 ```
-### To assign a character value
 ```{r}
+# To assign a character value
 msg<-"hello"
 msg
 ```
-### To assign a vector
 ```{r}
+# To assign a vector
 x1<-1:20
 x1
 ```
-### To use integers
 ```{r}
+# To assign an integer
 int<-2L
 int
 ```
@@ -44,46 +43,49 @@ as.logical(x1)
 list_x<-list(1,"a", TRUE, 1+4i, 2L)
 list_x
 ```
-### To create an empty matrix
+### Use of vectors
 ```{r}
-mat<-matrix(nrow=2, ncol=3)
-mat
-```
-### To see the dimension of the matrix created
-```{r}
-dim(mat)
-```
-### To see the attributes of the matrix. In this case its dimension
-```{r}
-attributes(mat)
-```
-### To fill a matrix
-```{r}
-mat<-matrix(1:6, nrow=2, ncol=3)
-mat
-```
-### To change the format of the matrix changing the dimension as attribute
-```{r}
-dim(mat)<-c(3,2)
-mat
-```
-### To concatenate vectors by rows 
-```{r}
+# To concatenate vectors by rows
 x2<-1:3
 y2<-7:9
 rbind(x2,y2)
 ```
-### To concatenate vectors by columns
 ```{r}
+# To concatenate vectors by columns
 cbind(x2,y2)
 ```
-### To use factors to label the results in the table
+### Use of matrix
 ```{r}
+# To create an empty matrix
+mat<-matrix(nrow=2, ncol=3)
+mat
+```
+```{r}
+# To see the dimension of the matrix created
+dim(mat)
+```
+```{r}
+# To see the attributes of the matrix. In this case its dimension
+attributes(mat)
+```
+```{r}
+# To fill a matrix
+mat<-matrix(1:6, nrow=2, ncol=3)
+mat
+```
+```{r}
+# To change the dim of the matrix by changing the dim attribute
+dim(mat)<-c(3,2)
+mat
+```
+### Use of factors
+```{r}
+# To use factors to label the results in the table
 fac<-factor(c("yes", "yes", "no", "yes"))
 fac
 ```
-### To see the factor as table
 ```{r}
+# To see the labels of factor as table
 table(fac)
 ```
 ### To find null values
@@ -94,63 +96,54 @@ is.na(fac)
 ```{r}
 is.nan(fac)
 ```
-### To create a dataframe in R
+### Dataframes in R
 ```{r}
+# To create a dataframe in R
 df<-data.frame(id=1:10, target=c(T,T,F,F,T,T,F,T,F,T), position=c(2,3,4,1,5,7,6,1,9,10), cost=c(21,32,NA,NA,4,23,24,76,12,9), season=c(1,1,1,2,2,2,3,3,3,4))
 df
 ```
-### To see the number of rows
 ```{r}
+# To see the number of rows
 nrow(df)
 ```
-### To see the number of columns
 ```{r}
+# To see the number of columns
 ncol(df)
 ```
-### To see the names of the columns
 ```{r}
+# To see the names of the columns
 names(df)
 ```
-### To obtain the value of cost in the 7th row
 ```{r}
+# To obtain the value of a DF using the column name and the row number
 df[7,"cost"]
 ```
-### To know how many missing values are in the cost column
 ```{r}
+# To know how many missing values are in a column
 cst_na=is.na(df["cost"])
 table(cst_na)
 ```
-### Calculate the mean removing the na values
 ```{r}
+# Calculate the mean removing the na values
 cst=df["cost"]
 cst=cst[!cst_na]
 mean(cst)
 ```
-### Extract the subset of rows with cost>21 and season>1 and calculate the mean of position
-
-#### First remove missing values
+### Extract a subset of rows with logic and calculate the mean of a column
 ```{r}
+# First remove missing values
 subset<-df[complete.cases(df$cost, df$season, df$position), ]
 subset
 ```
-#### Use the logical operator
 ```{r}
+# Use the logical operators to get the subset
 log<-subset[subset$cost>21 & subset$season>1,]
-log
-```
-#### Calculate the mean of position
-```{r}
+# Calculate the mean of the column "position"
 pos<-log[["season"]]
 mean(pos)
 ```
-### Calculate the mean of cost when season=3
 ```{r}
-df3<-df[df$season==3,]
-seas3<-df3[["cost"]]
-mean(seas3)
-```
-### Maximum cost value in the season 2
-```{r}
+# Find the Maximum value in the "cost" column given a logical condition
 df2<-df[df$season==2,]
 df2<-df2[["cost"]]
 max(df2, na.rm=TRUE)
@@ -160,7 +153,7 @@ max(df2, na.rm=TRUE)
 list_x1<-list(a=1,b=2,c=3)
 list_x1
 ```
-### To create a list with names
+### To create a matrix with names
 ```{r}
 mat2<-matrix(1:4,nrow=2, ncol=2)
 dimnames(mat2)<-list(c("a","b"),c("c","d"))
