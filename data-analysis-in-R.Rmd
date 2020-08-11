@@ -43,6 +43,11 @@ as.logical(x1)
 list_x<-list(1,"a", TRUE, 1+4i, 2L)
 list_x
 ```
+```{r}
+# To create a list with names
+list_x1<-list(a=1,b=2,c=3)
+list_x1
+```
 ### Use of vectors
 ```{r}
 # To concatenate vectors by rows
@@ -77,6 +82,12 @@ mat
 # To change the dim of the matrix by changing the dim attribute
 dim(mat)<-c(3,2)
 mat
+```
+```{r}
+# To create a matrix with names
+mat2<-matrix(1:4,nrow=2, ncol=2)
+dimnames(mat2)<-list(c("a","b"),c("c","d"))
+mat2
 ```
 ### Use of factors
 ```{r}
@@ -129,35 +140,18 @@ cst=df["cost"]
 cst=cst[!cst_na]
 mean(cst)
 ```
-### Extract a subset of rows with logic and calculate the mean of a column
 ```{r}
-# First remove missing values
-subset<-df[complete.cases(df$cost, df$season, df$position), ]
-subset
+# Extract a subset of rows with logic and calculate the mean of a column
+subset<-df[complete.cases(df$cost, df$season, df$position), ]  # remove missing values
+log<-subset[subset$cost>21 & subset$season>1,] # Use the logical operators to get the subset
+pos<-log[["season"]] # Take just the column "position" in another variable
+mean(pos) # Calculate the mean
 ```
 ```{r}
-# Use the logical operators to get the subset
-log<-subset[subset$cost>21 & subset$season>1,]
-# Calculate the mean of the column "position"
-pos<-log[["season"]]
-mean(pos)
-```
-```{r}
-# Find the Maximum value in the "cost" column given a logical condition
+# Find the Maximum value in the column "cost" given a logical condition
 df2<-df[df$season==2,]
 df2<-df2[["cost"]]
 max(df2, na.rm=TRUE)
-```
-### To create a list with names
-```{r}
-list_x1<-list(a=1,b=2,c=3)
-list_x1
-```
-### To create a matrix with names
-```{r}
-mat2<-matrix(1:4,nrow=2, ncol=2)
-dimnames(mat2)<-list(c("a","b"),c("c","d"))
-mat2
 ```
 ### If else control structure
 ```{r}
@@ -185,15 +179,15 @@ for (i in 1:3){
         print(i)
 } 
 ```
-#### Use of seq_along()
 ```{r}
+# Use of seq_along()
 x<-c("a","b","c","d")
 for (i in seq_along(x)){
         print(x[i])
 }
 ```
-#### Nested loop
 ```{r}
+# Nested loop
 x<-matrix(1:6, 2,3)
 for (i in seq_len(nrow(x))){
         for (j in seq_len(ncol(x))){
@@ -236,15 +230,16 @@ for (i in 1:6){
         print(i)
 }
 ```
-### Create a function
+### Functions
 ```{r}
+# Create a function
 add_func<-function(x,y){
         x+y
 }
 add_func(4,3)
 ```
-### Create function with default
 ```{r}
+# Create function with default
 add_func2<-function(x,y=3){
         x+y
 }
@@ -252,42 +247,42 @@ add_func2(2)
 ```
 ### Dates and time in R
 
-#### Assign a date
 ```{r}
+# Assign a date
 x<-as.Date("1970-01-01")
 x
 ```
-#### Actual system time
 ```{r}
+# Actual system time
 x<-Sys.time()
 x #it is in POSIXct
 ```
-#### To get info from POSIXlt
 ```{r}
+# To get info from POSIXlt
 p<-as.POSIXlt(x)
 p$sec
 ```
 ### Lapply structure
+lapply() takes a vector object and passes each item in the vector through a function.
+Each time an item is passed, the return method stores the value in a list
 ```{r}
+# Lapply to calculate the mean to objects in a list
 x<-list(a=1:4, b=rnorm(10))
 lapply(x, mean)
 ```
-#### Lapply structure with arguments for the function
 ```{r}
+# Lapply structure with arguments for the function
 x<-1:3
 lapply(x, runif, min=0, max=10)
 ```
-#### Lapply structure to take the subset of a matrix
-lapply() takes a vector object and passes each item in the vector through a function.
-Each time an iten is passed, the return method stores the value in a list
 ```{r}
-# lapply to a vector
+# Lapply to a vector
 vectorA <- 1:3
 listA<-lapply(vectorA, sqrt)
 listA
 ```
 ```{r}
-# lapply with a matrix
+# lapply to a matrix
 x<-list(a=matrix(1:4,2,2), b=matrix(1:6,3,2))
 lapply(x, function(elt) elt[,1])
 ```
@@ -296,18 +291,17 @@ lapply(x, function(elt) elt[,1])
 unlist(listA)
 ```
 ```{r}
-# lapply With a dataframe
+# lapply to a dataframe
 listB <- list(data.frame(x=1:3, y=1:3*2), data.frame(x=4:6, y=4:6*2))
 lapply(listB, sum)
 ```
-### Use an anonymous function with lapply
-Each dataframe is passed through the function as the data argument, all the results are saved and returned in a list
 ```{r}
-# sqrt of the values in the x column of both dataframes
-lapply(listB, function(data) sqrt(data$x))
+# Use an anonymous function with lapply
+# Each dataframe is passed through the function as the data argument, all the results are saved and returned in a list
+lapply(listB, function(data) sqrt(data$x)) # sqrt of the values in the x column of both dataframes
 ```
-### To use column names with lapply
 ```{r}
+# To use column names with lapply
 my_column <- "x"
 unlist( lapply(listB, function(data) data[[my_column]]) )
 ```
@@ -325,22 +319,24 @@ x<-matrix(rnorm(200), 20, 10)
 apply(x, 2, mean) # 2 To keep column dimension
 ```
 ```{r}
-apply(x, 1, mean) # 1 to keep row dimension
+# apply keeping the row dimension 
+apply(x, 1, mean) 
 ```
-There are shortcuts for specific cases of apply as rowSums, rowMeans, colSums and colMeans
 ```{r}
+# There are shortcuts for specific cases of apply as rowSums, rowMeans, colSums and colMeans
 rowSums(x)
 ```
-#### Calculate quantiles with apply
 ```{r}
+# Calculate quantiles with apply
 apply(x, 1, quantile, probs=c(0.25,0.75))
 ```
-#### Calculate the mean using apply of a matrix of 3 dimensions
 ```{r}
+# Calculate the mean using apply of a matrix of 3 dimensions
 a<-array(rnorm(2*2*10), c(2,2,10))
 apply(a,c(1,2), mean)
 ```
 ```{r}
+# rowMeans with dims argument
 rowMeans(a,dims=2)
 ```
 ### Mapply structure
@@ -348,15 +344,15 @@ when more than one argument is needed
 ```{r}
 mapply(rep, 1:3, 3:1)
 ```
-#### Vectorizing a function
 ```{r}
+# Vectorizing a function with mapply
 noise<-function(n,mean,sd){
         rnorm(n, mean, sd)
 }
 mapply(noise, 1:3, 1:3,2)
 ```
-The same as 
 ```{r}
+# The same as vectorizing the function
 list(noise(1,1,2), noise(2,2,2), noise(3,3,2))
 ```
 ### Tapply structure
