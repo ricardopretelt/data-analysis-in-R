@@ -126,6 +126,11 @@ ncol(df)
 names(df)
 ```
 ```{r}
+# To obtain the unique values in a column
+unique(df["season"])
+```
+
+```{r}
 # To obtain the value of a DF using the column name and the row number
 df[7,"cost"]
 ```
@@ -153,6 +158,14 @@ df2<-df[df$season==2,]
 df2<-df2[["cost"]]
 max(df2, na.rm=TRUE)
 ```
+### Histograms
+```{r}
+# To plot the histogram of the values of a column
+# In this case season, which is 4th column
+df[, 4] <- as.numeric(df[, 4])
+hist(df[, 4])
+```
+
 ### If else control structure
 ```{r}
 x<-2
