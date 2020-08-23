@@ -96,7 +96,7 @@ fac<-factor(c("yes", "yes", "no", "yes"))
 fac
 ```
 ```{r}
-# To see the labels of factor as table
+# Table() to know the different values and the quantities of a variable 
 table(fac)
 ```
 ### To find null values
